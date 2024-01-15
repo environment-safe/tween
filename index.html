@@ -33,7 +33,7 @@
           ></script>
         <script type="module">
             import { getPackage } from '@environment-safe/package';
-            const pkgReady = getPackage('/tween/package.json');
+            const pkgReady = getPackage('tween/');
             const ready = Promise.all([
                 pkgReady, 
                 new Promise((resolve)=>{
