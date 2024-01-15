@@ -84,7 +84,7 @@
         "@babel/plugin-transform-modules-commonjs": "^7.22.5",
         "@environment-safe/chai": "^0.2.0",
         "@environment-safe/commonjs-builder": "^0.0.3",
-        "@environment-safe/jsdoc-builder": "^0.0.2",
+        "@environment-safe/jsdoc-builder": "^0.0.3",
         "@open-automaton/moka": "^0.5.2",
         "babel-plugin-search-and-replace": "^1.1.1",
         "babel-plugin-transform-import-meta": "^2.2.0",

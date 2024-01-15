@@ -14,7 +14,7 @@ Usage
 
 <table><tr><td colspan="3">
 
-`@environment-safe/tween'` supports legacy usage of commonjs, modern ESM, can be built with either of those or may be directly included in the browser with ESM. No build is required in your library or ours.
+`@environment-safe/tween` supports legacy usage of commonjs, modern ESM, can be built with either of those or may be directly included in the browser with ESM. No build is required in your library or ours.
 </td></tr><tr><td valign="top">
 <details><summary> CommonJS </summary><p>
 
