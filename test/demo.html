@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+        <link href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' rel='stylesheet' />-->
+        <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+        <link href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' rel='stylesheet' />
+        <script src='https://unpkg.com/@turf/turf@3.8.0/turf.min.js'></script>
+        <script type="importmap">{ "imports" :{
+            "@environment-safe/tween":"../src/index.mjs"
+        }}</script>
+        <title>@environment-safe/tween Demo</title>
+        <style>
+            .box{
+                height: 100px;
+                width: 100px;
+                background-color: #990000;
+                display: block;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" id="linear"></div>
+        <div class="box" id="easeInQuad"></div>
+        <div class="box" id="easeOutQuad"></div>
+        <div class="box" id="easeInOutQuad"></div>
+        <div class="box" id="easeInCubic"></div>
+        <div class="box" id="easeOutCubic"></div>
+        <div class="box" id="easeInOutCubic"></div>
+        <div class="box" id="easeInQuart"></div>
+        <div class="box" id="easeOutQuart"></div>
+        <div class="box" id="easeInOutQuart"></div>
+        <div class="box" id="easeInQuint"></div>
+        <div class="box" id="easeOutQuint"></div>
+        <div class="box" id="easeInOutQuint"></div>
+        <div class="box" id="easeInSine"></div>
+        <div class="box" id="easeOutSine"></div>
+        <div class="box" id="easeInOutSine"></div>
+        <div class="box" id="easeInExpo"></div>
+        <div class="box" id="easeOutExpo"></div>
+        <div class="box" id="easeInOutExpo"></div>
+        <div class="box" id="easeInCirc"></div>
+        <div class="box" id="easeOutCirc"></div>
+        <div class="box" id="easeInOutCirc"></div>
+        <div class="box" id="easeInElastic"></div>
+        <div class="box" id="easeOutElastic"></div>
+        <div class="box" id="easeInOutElastic"></div>
+        <div class="box" id="easeInBack"></div>
+        <div class="box" id="easeOutBack"></div>
+        <div class="box" id="easeInOutBack"></div>
+        <div class="box" id="easeInBounce"></div>
+        <div class="box" id="easeOutBounce"></div>
+        <div class="box" id="easeInOutBounce"></div>
+        <script type="module">
+            //TODO: add RAF instead of timing
+            import { Tween } from '@environment-safe/tween';
+            const tweenElement = async (el, cssAttr, start, stop, duration=1000)=>{
+                const easing = el.getAttribute('id');
+                const startTime = Date.now();
+                const handler = ()=>{
+                    const now = Date.now();
+                    const time = Math.min(now - startTime, duration)
+                    const currentValue = Tween[easing](time, start, stop, duration);
+                    el.style[cssAttr] = currentValue+'px';
+                    console.log(cssAttr, currentValue)
+                };
+                const intervalId = setInterval(handler, 20);
+                await new Promise((resolve, reject)=>{
+                    setTimeout(()=>{
+                        clearInterval(intervalId);
+                        resolve();
+                    }, duration + duration*(0.1)); //add a margin, to be safe
+                });
+            };
+            window.scrollTo(0, 0); //for refresh
+            const els = document.getElementsByClassName('box');
+            for(let lcv = 0; lcv < els.length; lcv++){
+                els[lcv].style.top = (lcv * 120)+'px';
+                els[lcv].innerHTML = els[lcv].getAttribute('id');
+            }
+            for(let lcv = 0; lcv < els.length; lcv++){
+                window.scrollTo(0, (lcv * 120))
+                await tweenElement(els[lcv], 'left', 0 , 300);
+            }
+            for(let lcv = 0; lcv < els.length; lcv++){
+                window.scrollTo(0, (lcv * 120))
+                await tweenElement(els[lcv], 'left', 300 , 0);
+            }
+        </script>
+    </body>
+</html>

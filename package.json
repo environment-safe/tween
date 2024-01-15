@@ -1,13 +1,15 @@
 {
-    "name": "@environment-safe/template",
-    "version": "0.0.2",
+    "name": "@environment-safe/tween",
+    "version": "0.0.1",
     "type": "module",
     "main": "dist/index.mjs",
     "module": "src/index.mjs",
     "commonjs": "dist/index.cjs",
+    "types": "./src/index.d.mts",
     "exports": {
         ".": {
             "import": "./src/index.mjs",
+            "types": "./src/index.d.mts",
             "require": "./dist/index.cjs"
         },
         "./package.json": {
@@ -16,24 +18,32 @@
         },
         "./src/index.mjs": {
             "import": "./src/index.mjs",
+            "types": "./src/index.d.mts",
             "require": "./dist/index.cjs"
         },
         "./dist/index.cjs": {
             "import": "./src/index.mjs",
+            "types": "./src/index.d.mts",
             "require": "./dist/index.cjs"
         }
     },
-    "homepage": "https://github.com/environment-safe/template",
-    "description": "A template for buildless module development",
-    "keywords": [],
+    "homepage": "https://github.com/environment-safe/tween",
+    "description": "ESM compatible tween functions",
+    "keywords": [
+        "penner",
+        "tween",
+        "animate",
+        "esm",
+        "module"
+    ],
     "author": "Abbey Hawk Sparrow <@khrome> (http://patternweaver.com)",
     "contributors": [],
     "repository": {
         "type": "git",
-        "url": "git@github.com:environment-safe/template.git"
+        "url": "git@github.com:environment-safe/tween.git"
     },
     "bugs": {
-        "url": "https://github.com/environment-safe/template/issues"
+        "url": "https://github.com/environment-safe/tween/issues"
     },
     "moka": {
         "firefox": {
@@ -54,7 +64,7 @@
                 "type": "webkit"
             }
         },
-        "stub": "src/stub.mjs",
+        "stub": "node_modules/@open-automaton/moka/src/stub.mjs",
         "stubs": [
             "express",
             "module",
@@ -85,6 +95,7 @@
     },
     "scripts": {
         "lint": "eslint src/*.mjs test/*.mjs",
+        "demo": "open \"http://localhost:8085/test/demo.html\" ; npx http-server -p 8085",
         "test": "npm run import-test; npm run browser-test; npm run require-test",
         "import-test": "mocha test/test.mjs",
         "require-test": "mocha test/test.cjs",

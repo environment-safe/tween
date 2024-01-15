@@ -1,67 +1,92 @@
-<span>
-    
-environment-safe-template
-=========================
+@environment-safe/tween
+=======================
+Robert Penner's tweening functions as used in [tween-functions](https://github.com/chenglou/tween-functions), and unlike [@tweenjs/tween.js](https://www.npmjs.com/package/@tweenjs/tween.js) it's not written in a metalanguage so the source can be directly included without build, but it does include types built with jsdoc. 
 
-This setup normalizes a **from source** usage for all environments ([node](https://nodejs.org/)/[browser](https://developer.mozilla.org/en-US/docs/Web/JavaScript)+[modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)/[commonjs](https://en.wikipedia.org/wiki/CommonJS)). It [babel]() compiles the commonjs files into `/dist` and it (from [jsdoc](https://jsdoc.app/)) compiles both docs (in `/docs`) and typescript types (alongside the source in `/src`).
-
-It sets up a single test that is used in headless, browser and node modes, has a sane set of lint rules and husky bindings to make sure you:
-
-1) don't have to do any of it manually
-2) it all stays up to date
-3) You write in a single format
-4) The source you are writing is executable as-is in node + the browser
-5) 1 file to rule them all
-
-This allows you to use either source tree for compilation as well.
-
-Requirements
-------------
-
-You need a copy of [`jq`](https://jqlang.github.io/jq/) installed in order to initialize
+Penner's original functions uses the change in value rather than final value as parameter. [tween-functions](https://github.com/chenglou/tween-functions) changed this to finalValue, which I continue to support.
 
 Usage
 -----
+## API
 
-[fork as a template in github]( https://docs.github.com/en/enterprise-server@2.22/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template ) then clone it locally
+`tweenFunction.tweenName(currentTime, beginValue, endValue, totalDuration)`
 
-OR
+## Examples
 
-use the [github cli](https://cli.github.com/) to create a template from the repo
-```bash
-    gh repo create --template="@environment-safe/template" <new-repo-name>
+<table><tr><td colspan="3">
+
+`@environment-safe/tween'` supports legacy usage of commonjs, modern ESM, can be built with either of those or may be directly included in the browser with ESM. No build is required in your library or ours.
+</td></tr><tr><td valign="top">
+<details><summary> CommonJS </summary><p>
+
+```js
+const { Tween } = require('@environment-safe/tween');
+Tween.easeInQuad(1, 0, 50, 5); // => 2
 ```
 
-OR
+</p></details></td><td valign="top">
 
-Use degit to copy the repo with no history
-```bash
-    mkdir <new-repo-name>
-    cd <new-repo-name>
-    npx degit environment-safe/template
-    git init
+<details><summary> ES Modules </summary><p>
+
+```js
+import { Tween } from '@environment-safe/tween';
+Tween.easeInQuad(1, 0, 50, 5); // => 2
 ```
 
-THEN
+</p></details></td><td valign="top">
 
-Once you've done that, change directories into the project directory and run `./initialize` which will configure your `package.json`, your `LICENSE` and your `README.md`(this file) and remove any artifacts as well as itself and stage the changes for commit.
+<details><summary> HTML </summary><p>
 
-LAST
+```html
+<script type="importmap">{ "imports" :{
+    "@environment-safe/tween":
+        "./node_modules/@environment-safe/tween/src/index.mjs"
+}}</script>
+<script type="module">
+    import { Tween } from '@environment-safe/tween';
+    Tween.easeInQuad(1, 0, 50, 5); // => 2
+</script>
+```
+</p></details></td></tr></table>
 
-When you commit, the rest of the artifacts will be generated and added to your commit.
+### Available functions:
 
-When you come back this will all be gone. Good Luck!
+- linear
+- easeInQuad
+- easeOutQuad
+- easeInOutQuad
+- easeInCubic
+- easeOutCubic
+- easeInOutCubic
+- easeInQuart
+- easeOutQuart
+- easeInOutQuart
+- easeInQuint
+- easeOutQuint
+- easeInOutQuint
+- easeInSine
+- easeOutSine
+- easeInOutSine
+- easeInExpo
+- easeOutExpo
+- easeInOutExpo
+- easeInCirc
+- easeOutCirc
+- easeInOutCirc
+- easeInElastic
+- easeOutElastic
+- easeInOutElastic
+- easeInBack
+- easeOutBack
+- easeInOutBack
+- easeInBounce
+- easeOutBounce
+- easeInOutBounce
 
-Roadmap
--------
+You can see a demo of all the easing functions in action by running:
 
-- [X] - submodule for minimal project footprint
-- [ ] - support windows development
-- [ ] - support multiple licenses
-- [ ] - support electron
-- [ ] - support cordova
-
-</span>
+```bash
+npm run demo
+```
 
 Testing
 -------
