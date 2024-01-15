@@ -50,37 +50,37 @@ Tween.easeInQuad(1, 0, 50, 5); // => 2
 
 ### Available functions:
 
-- linear
-- easeInQuad
-- easeOutQuad
-- easeInOutQuad
-- easeInCubic
-- easeOutCubic
-- easeInOutCubic
-- easeInQuart
-- easeOutQuart
-- easeInOutQuart
-- easeInQuint
-- easeOutQuint
-- easeInOutQuint
-- easeInSine
-- easeOutSine
-- easeInOutSine
-- easeInExpo
-- easeOutExpo
-- easeInOutExpo
-- easeInCirc
-- easeOutCirc
-- easeInOutCirc
-- easeInElastic
-- easeOutElastic
-- easeInOutElastic
-- easeInBack
-- easeOutBack
-- easeInOutBack
-- easeInBounce
-- easeOutBounce
-- easeInOutBounce
+- [linear](https://environment-safe.github.io/tween/docs/global.html#linearAlineartweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInQuad](https://environment-safe.github.io/tween/docs/global.html#easeInQuadAeaseInQuadtweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutQuad](https://environment-safe.github.io/tween/docs/global.html#easeOutQuadAeaseOutQuadtweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutQuad](https://environment-safe.github.io/tween/docs/global.html#easeInOutQuadAeaseInOutQuadtweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInCubic](https://environment-safe.github.io/tween/docs/global.html#easeInCubicAeaseInCubictweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutCubic](https://environment-safe.github.io/tween/docs/global.html#easeOutCubicAeaseOutCubictweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutCubic](https://environment-safe.github.io/tween/docs/global.html#easeInOutCubicAeaseInOutCubictweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInQuart](https://environment-safe.github.io/tween/docs/global.html#easeInQuartAeaseInQuarttweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutQuart](https://environment-safe.github.io/tween/docs/global.html#easeOutQuartAeaseOutQuarttweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutQuart](https://environment-safe.github.io/tween/docs/global.html#easeInOutQuartAeaseInOutQuarttweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInQuint](https://environment-safe.github.io/tween/docs/global.html#easeInQuintAeaseInQuinttweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutQuint](https://environment-safe.github.io/tween/docs/global.html#easeOutQuintAeaseOutQuinttweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutQuint](https://environment-safe.github.io/tween/docs/global.html#easeInOutQuintAeaseInOutQuinttweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInSine](https://environment-safe.github.io/tween/docs/global.html#easeInSineAeaseInSinetweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutSine](https://environment-safe.github.io/tween/docs/global.html#easeOutSineAeaseOutSinetweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutSine](https://environment-safe.github.io/tween/docs/global.html#easeInOutSineAeaseInOutSinetweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInExpo](https://environment-safe.github.io/tween/docs/global.html#easeInExpoAeaseInExpotweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutExpo](https://environment-safe.github.io/tween/docs/global.html#easeOutExpoAeaseOutExpotweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutExpo](https://environment-safe.github.io/tween/docs/global.html#easeInOutExpoAeaseInOutExpotweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInCirc](https://environment-safe.github.io/tween/docs/global.html#easeInCircAeaseInCirctweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutCirc](https://environment-safe.github.io/tween/docs/global.html#easeOutCircAeaseOutCirctweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutCirc](https://environment-safe.github.io/tween/docs/global.html#easeInOutCircAeaseInOutCirctweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInElastic](https://environment-safe.github.io/tween/docs/global.html#easeInElasticAeaseInElastictweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutElastic](https://environment-safe.github.io/tween/docs/global.html#easeOutElasticAeaseOutElastictweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutElastic](https://environment-safe.github.io/tween/docs/global.html#easeInOutElasticAeaseInOutElastictweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInBack](https://environment-safe.github.io/tween/docs/global.html#easeInBackAeaseInBacktweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutBack](https://environment-safe.github.io/tween/docs/global.html#easeOutBackAeaseOutBacktweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutBack](https://environment-safe.github.io/tween/docs/global.html#easeInOutBackAeaseInOutBacktweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInBounce](https://environment-safe.github.io/tween/docs/global.html#easeInBounceAeaseInBouncetweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeOutBounce](https://environment-safe.github.io/tween/docs/global.html#easeOutBounceAeaseOutBouncetweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
+- [easeInOutBounce](https://environment-safe.github.io/tween/docs/global.html#easeInOutBounceAeaseInOutBouncetweenaccordingto%253Cahref=%2522http://robertpenner.com/easing/%2522%253ERobertPenner'seasingfunctions%253C/a%253E)
 
 You can see a demo of all the easing functions in action by running:
 
